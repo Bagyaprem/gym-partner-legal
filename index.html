@@ -28,6 +28,10 @@
     <li><a href="terms.html">Terms of Service</a></li>
     <li><a href="delete-account.html">Delete your account</a></li>
   </ul>
+  <script>
+    // Reset emails sent without a redirect (dashboard, app build 6) land here; pass the token on
+    if (/(^|[#&])type=recovery(&|$)/.test(location.hash)) location.replace('reset-password.html' + location.hash);
+  </script>
   <p class="meta">Contact: <a href="mailto:gympartner.support@gmail.com">gympartner.support@gmail.com</a></p>
 </main>
 </body>
